@@ -19,7 +19,7 @@
                 distribution: 'temurin'
 
           - name: run maven build 
-            run: mvn --batch-mode --update-snapshots package
+            run: mvn package
 
             
           - name: artifact upload 
