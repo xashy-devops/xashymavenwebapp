@@ -93,16 +93,10 @@
 	</dependencies>
 	<distributionManagement>
 	    <repository>
-	      <id>nexus</id>
+	      <id>github</id>
 	      <name>xashy-tech</name>
 	      <url></url>
-	    </repository>
-	    
-	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name></name>
-	      <url></url>
-	    </snapshotRepository>
+	    </repository> 
 	    
 	</distributionManagement>
 	

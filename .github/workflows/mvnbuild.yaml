@@ -1,0 +1,35 @@
+
+  name: mavenbuild-workflow
+  on: 
+    push:
+        branches:
+             master
+    workflow_dispatch: 
+  jobs:
+    mavenbuild:
+       runs-on: ubuntu-latest
+       steps:
+          - name: checkoutcode
+            uses: actions/checkout@v3
+          
+          - name: setup-maven-environment 
+            uses: actions/setup-java@v3
+            with:
+                java-version: '17'
+                distrubution: 'temurin'
+
+          - name: run maven build 
+            run: mvn --batch-mode --update-snapshots package
+
+            
+          - name: artifact upload 
+            uses: actions/upload-artifact@v3
+            with: 
+                name: mavenpackage
+                path: target/*.war 
+       
+
+
+
+                   
+            
