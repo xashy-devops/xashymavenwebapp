@@ -4,6 +4,7 @@
     push:
         branches:
              master
+             feature/mavenbuild
     workflow_dispatch: 
   jobs:
     mavenbuild:
